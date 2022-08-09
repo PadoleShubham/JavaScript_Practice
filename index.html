@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScipts Basic</h1>
+    <script>
+        var a=10;
+        console.log(typeof a);
+        a='Deepa';
+        console.log(typeof a);
+        a=true;
+        console.log(typeof a);
+
+        //== and ===
+        console.log(10=='10');
+        console.log(10==='10');
+
+        //&&
+        console.log(8==9 && 6==6);//false
+        console.log('' && 6==6);//''
+        var a=10;
+        var b=20;
+        var add=a+b;
+        var prod=a*b;
+        document.write("Addition="+add+"Prod="+prod);
+        document.write(`Addition=${add} Prod=${prod}`);
+
+        //Window method
+        alert('Welcome');
+        var b=prompt("Enter number");
+        document.write("Square="+b*b);
+        var c=confirm("do you want contine")
+        alert(c);
+        var str='a';
+        console.log(str.charCodeAt(0));//return ascii value
+
+        for(var ch=65;ch<=90;ch++)
+        {
+            console.log(String.fromCharCode(ch));
+        }
+
+        //array
+        var x=[1,2,3,"Deepa",true,9.8];
+        console.log(x);
+        for(var i=x.length-1;i>=0;i--)
+        {
+            console.log(x[i]);
+        }
+
+        //function
+        function factorial(n)
+        {
+            var fact=1;
+            for(var i=0;i<=n;i++)
+            {
+                fact=fact*n;
+            }
+            console.log(fact);
+        }
+        //
+        factorial(5);
+        function sum(a,b)
+        {
+            var s=a+b;
+            alert(s);
+        }
+        
+        sum(10,20);
+
+        function EvenOdd(n)
+        {
+            if(n%2==0)
+            {
+                console.log("even");
+            }
+            else
+            {
+                console.log("odd"); 
+            }
+        }
+
+        EvenOdd(21);
+
+    </script>
+</body>
+</html>
