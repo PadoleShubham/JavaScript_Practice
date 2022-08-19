@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <script>
+       
+
+        function add(){
+            var tableinfo=document.getElementById("tableinfo");
+            var name=document.getElementById("name").value;
+            var percent=document.getElementById("percent").value;
+
+            var tr=document.getElementById("info");
+            var td1=document.getElementById("nm");
+            var td2=document.getElementById("pr");
+
+            td1.innerHTML=name;
+            td2.innerHTML=percent;
+           
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tableinfo.appendChild(tr);
+          
+            
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Name:</label>
+        <input type="text" id="name">
+        <label>Percentage:</label>
+        <input type="text" id="percent">
+        <br><br>
+        <button type="submit" value="add" onclick="add()">Add</button>
+        <br><br>
+        
+        <table border="1" id="tableinfo">
+            <tr>
+                <th>Name</th>
+                <th>Percentage</th>
+            </tr>
+            <tr>
+                <td >Shubham</td>
+                <td>95%</td>
+            </tr>
+            <tr id="info">
+                <td id="nm">shyam</td>
+                <td id="pr">66</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
