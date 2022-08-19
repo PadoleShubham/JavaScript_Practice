@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script>
+       function multi()
+        {
+            var numone=document.getElementById("numone").value;
+            var numtwo=document.getElementById("numtwo").value;
+            var ress=numone*numtwo;
+            var results=document.getElementById("results");
+            var res=document.getElementById("res"); 
+            res.innerHTML=ress; 
+        }
+      function divide()
+        {
+            var numone=document.getElementById("numone").value;
+            var numtwo=document.getElementById("numtwo").value;
+            var add=numone/numtwo;
+            res.innerHTML=add;
+        }
+
+        //using filter
+        const isnum=[10,2,5,7,1,55,99,44,33,66,22];
+        function numsort(value)
+        {
+            return value>=9;
+        }
+        const resultfilter=isnum.filter(numsort);
+        console.log(resultfilter);
+
+        var arr=[4,5,6,7,8,9];
+        var arr1=[1,2,3,...arr];
+        console.log(arr1);
+        var emp=[
+            {id:1,name:'shyam',salary:20000,loaction:'Pune'},
+            {id:2,name:'Raj',salary:10000,loaction:'Goa'},
+            {id:3,name:'gajanan',salary:9000,loaction:'Nashik'},
+            {id:4,name:'Suraj',salary:8000,loaction:'Pune'},
+            {id:5,name:'Akash',salary:20000,loaction:'Pune'},
+            {id:6,name:'Nilesh',salary:6000,loaction:'Surat'},
+        ];
+        function salaryFind(salary)
+        {
+            return emp.salary<=10000;
+        }
+        const resultfil=emp.filter(salaryFind);
+        console.log(resultfil);
+      
+    </script>
+</head>
+<body>
+    <br><br>
+    <label>1st number:</label>
+    <input type="number" id="numone">
+    <label >2nd number:</label>
+    <input type="number" id="numtwo">
+    <br><br>
+    <button id="mul" onclick="multi()">multiply</button>
+    <button id="divide" onclick="divide()">Divide</button>
+    <br><br>
+    <label id="results">The result is:</label>
+    <label id="res"></label>
+    <br><br><br><br>
+    <h3>List of Employee Salary is less than 10000</h3>
+</body>
+</html>
